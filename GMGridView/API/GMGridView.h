@@ -52,10 +52,10 @@ typedef enum
 }
 
 // Delegates
-@property (nonatomic, weak) NSObject<GMGridViewDataSource> *dataSource;                    // Required
-@property (nonatomic, weak) NSObject<GMGridViewActionDelegate> *actionDelegate;            // Optional - to get taps callback
-@property (nonatomic, weak) NSObject<GMGridViewSortingDelegate> *sortingDelegate;          // Optional - to enable sorting
-@property (nonatomic, weak) NSObject<GMGridViewTransformationDelegate> *transformDelegate; // Optional - to enable fullsize mode
+@property (nonatomic, assign) NSObject<GMGridViewDataSource> *dataSource;                    // Required
+@property (nonatomic, assign) NSObject<GMGridViewActionDelegate> *actionDelegate;            // Optional - to get taps callback
+@property (nonatomic, assign) NSObject<GMGridViewSortingDelegate> *sortingDelegate;          // Optional - to enable sorting
+@property (nonatomic, assign) NSObject<GMGridViewTransformationDelegate> *transformDelegate; // Optional - to enable fullsize mode
 
 // Layout Strategy
 @property (nonatomic, strong) id<GMGridViewLayoutStrategy> layoutStrategy; // Default is GMGridViewLayoutVerticalStrategy
@@ -64,7 +64,7 @@ typedef enum
 @property (nonatomic, getter=isEditing) BOOL editing; // Default is NO - When set to YES, all gestures are disabled and delete buttons shows up on cells
 
 // Customizing Options
-@property (nonatomic, weak) UIView *mainSuperView;                    // Default is self
+@property (nonatomic, assign) UIView *mainSuperView;                    // Default is self
 @property (nonatomic) GMGridViewStyle style;                          // Default is GMGridViewStyleSwap
 @property (nonatomic) NSInteger itemSpacing;                          // Default is 10
 @property (nonatomic) BOOL centerGrid;                                // Default is YES

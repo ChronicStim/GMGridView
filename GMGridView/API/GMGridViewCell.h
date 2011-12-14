@@ -38,5 +38,4 @@
 @property (nonatomic, strong) UIImage *deleteButtonIcon;   // Delete button image
 @property (nonatomic) CGPoint deleteButtonOffset;          // Delete button offset relative to the origin
 
-
 @end

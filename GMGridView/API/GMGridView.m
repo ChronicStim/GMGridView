@@ -1000,7 +1000,7 @@ static const UIViewAnimationOptions kDefaultAnimationOptions = UIViewAnimationOp
     cell.tag = position + kTagOffset;
     cell.editing = self.editing;
     
-    __weak GMGridView *weakSelf = self; 
+    GMGridView *weakSelf = self; 
     
     cell.deleteBlock = ^(GMGridViewCell *cell)
     {
